@@ -28,7 +28,7 @@ No Prime repo to fork this time.
  Test it with Postman
 
 4. Finish your endpoints
- Add a POST endpoint which accepts a title and text as JSON and creates a new table row
+ ~~Add a POST endpoint which accepts a title and text as JSON and creates a new table row
  Update your GET endpoint:
 Sort by timestamp with newest first
 Send back only the ten most recent messages

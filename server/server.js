@@ -21,8 +21,12 @@ app.get('/messages', (req, res) => {
 
 app.post('/messages', (req, res) => {
     let messages = req.body;
-
-    pool.query(query, [messages.title, messages.text, Date.now()])
+    let query =
+    `INSERT INTO "messages("title", "text")
+    VALUES ('$1, $2, $3)
+`
+    
+    pool.query(query, [messages.title, messages.text, messages.timestamp(Date.now())])
     .then(() => {
         res.sendStatus(201);
     })
